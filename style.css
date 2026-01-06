@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.neon {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+.user-stats {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.level {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.premium-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #1a1a2e;
+    font-size: 0.9rem;
+}
+
+/* Game Info Bar */
+.game-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.timer, .genre, .score {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.label {
+    display: block;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 5px;
+}
+
+.time-display, .score-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.genre-name {
+    font-size: 1.2rem;
+    color: #00ffff;
+}
+
+/* Game Area */
+.game-area {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.word-grid {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.grid-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.letter {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 2px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.letter:hover {
+    background: rgba(0, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Word List */
+.word-list {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.word-list h3 {
+    color: #00ffff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.words {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.word {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.word.found {
+    background: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+    text-decoration: line-through;
+}
+
+/* Controls */
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00ffff, #0080ff);
+    color: #1a1a2e;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.5);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Progress Section */
+.progress-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.progress-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0080ff);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.next-level {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-area {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .letter {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+/* Add these new highlighting styles to your existing CSS */
+
+/* Highlighted letter states */
+.letter.highlighted {
+    background: linear-gradient(45deg, #00ffff, #0080ff);
+    color: #1a1a2e;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.letter.selected {
+    background: rgba(0, 255, 255, 0.4);
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Different highlight colors for found words */
+.letter.word-1 { background: linear-gradient(45deg, #ff6b6b, #ff8e8e); }
+.letter.word-2 { background: linear-gradient(45deg, #4ecdc4, #45b7b8); }
+.letter.word-3 { background: linear-gradient(45deg, #ffe66d, #ffd93d); }
+.letter.word-4 { background: linear-gradient(45deg, #95e1d3, #6c5ce7); }
+.letter.word-5 { background: linear-gradient(45deg, #fd79a8, #e84393); }
+
+/* Highlight animation effect */
+.letter.found-animation {
+    animation: foundWord 0.6s ease-in-out;
+}
+
+@keyframes foundWord {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); box-shadow: 0 0 25px rgba(0, 255, 255, 1); }
+    100% { transform: scale(1.05); }
+}
+
+/* Visual feedback for word completion */
+.word-completion-effect {
+    position: absolute;
+    background: rgba(0, 255, 255, 0.9);
+    color: #1a1a2e;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    animation: wordFound 1s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes wordFound {
+    0% { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateY(-50px) scale(1.2); 
+    }
+}
+/* Add neon blue side borders to the main container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.container::before,
+.container::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, 
+        transparent 0%, 
+        #00ffff 20%, 
+        #0080ff 50%, 
+        #00ffff 80%, 
+        transparent 100%);
+    box-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 30px #00ffff;
+    z-index: 1000;
+}
+
+.container::before {
+    left: 20px;
+}
+
+.container::after {
+    right: 20px;
+}
+
+/* Alternative option - add neon borders to specific sections */
+.neon-border-section {
+    border-left: 3px solid #00ffff;
+    border-right: 3px solid #00ffff;
+    box-shadow: 
+        -10px 0 20px rgba(0, 255, 255, 0.3),
+        10px 0 20px rgba(0, 255, 255, 0.3);
+    padding-left: 25px;
+    padding-right: 25px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainGrind - Word Search Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="logo">
+                <h1>Brain<span class="neon">Grind</span></h1>
+            </div>
+            <div class="user-stats">
+                <div class="level">Level <span class="neon">7</span></div>
+                <div class="premium-badge">Premium</div>
+            </div>
+        </header>
+
+        <!-- Game Info Bar -->
+        <div class="game-info">
+            <div class="timer">
+                <span class="label">Time</span>
+                <span class="time-display neon">02:45</span>
+            </div>
+            <div class="genre">
+                <span class="label">Genre</span>
+                <span class="genre-name">Animals</span>
+            </div>
+            <div class="score">
+                <span class="label">Score</span>
+                <span class="score-display">1,240</span>
+            </div>
+        </div>
+
+        <!-- Game Grid with highlighted examples -->
+        <div class="game-area">
+            <div class="word-grid">
+                <!-- Sample 8x8 grid with highlighted found words -->
+                <div class="grid-row">
+                    <span class="letter word-1">C</span><span class="letter word-1">A</span><span class="letter word-1">T</span><span class="letter">R</span><span class="letter">M</span><span class="letter word-2">O</span><span class="letter word-2">U</span><span class="letter word-2">S</span>
+                </div>
+                <div class="grid-row">
+                    <span class="letter">H</span><span class="letter">E</span><span class="letter">L</span><span class="letter">E</span><span class="letter">P</span><span class="letter word-2">H</span><span class="letter">A</span><span class="letter word-2">E</span>
+                </div>
+                <div class="grid-row">
+                    <span class="letter">A</span><span class="letter">R</span><span class="letter word-3">D</span><span class="letter word-3">O</span><span class="letter word-3">G</span><span class="letter">K</span><span class="letter">B</span><span class="letter">T</span>
+                </div>
+                <div class="grid-row">
+                    <span class="letter">M</span><span class="letter">B</span><span class="letter">E</span><span class="letter">A</span><span class="letter">R</span><span class="letter">L</span><span class="letter">I</span><span class="letter">S</span>
+                </div>
+                <div class="grid-row">
+                    <span class="letter">P</span><span class="letter">A</span><span class="letter">N</span><span class="letter">D</span><span class="letter">A</span><span class="letter">M</span><span class="letter">O</span><span class="letter">N</span>
+                </div>
+                <div class="grid-row">
+                    <span class="letter">A</span><span class="letter">N</span><span class="letter">Z</span><span class="letter">E</span><span class="letter">B</span><span class="letter">R</span><span class="letter">A</span><span class="letter">K</span>
+                </div>
+                <div class="grid-row">
+                    <span class="letter">N</span><span class="letter">L</span><span class="letter">I</span><span class="letter">O</span><span class="letter">N</span><span class="letter">T</span><span class="letter">I</span><span class="letter">G</span>
+                </div>
+                <div class="grid-row">
+                    <span class="letter">Z</span><span class="letter">E</span><span class="letter">E</span><span class="letter">B</span><span class="letter">R</span><span class="letter">A</span><span class="letter">F</span><span class="letter">E</span>
+                </div>
+            </div>
+
+            <!-- Word List -->
+            <div class="word-list">
+                <h3>Find These Words:</h3>
+                <div class="words">
+                    <span class="word found">CAT</span>
+                    <span class="word found">DOG</span>
+                    <span class="word found">MOUSE</span>
+                    <span class="word">ELEPHANT</span>
+                    <span class="word">BEAR</span>
+                    <span class="word">LION</span>
+                    <span class="word">ZEBRA</span>
+                    <span class="word">PANDA</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="game-controls">
+            <button class="btn-secondary">Pause</button>
+            <button class="btn-primary">New Game</button>
+            <button class="btn-secondary">Settings</button>
+        </div>
+
+        <!-- Level Progress -->
+        <div class="progress-section">
+            <div class="progress-label">Level 7 Progress</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="next-level">Next: Level 8 - Science Words</div>
+        </div>
+    </div>
+</body>
+</html>
